@@ -27,4 +27,5 @@ int main(int argc, char *argv[]) {
     for(int i = 0; i < size; i++){
         cout << valid_str_vec[i] << " - 123.456 = " << str_adder(valid_str_vec[i], "-123.456") << endl;
     }
+    return 0;
 }
