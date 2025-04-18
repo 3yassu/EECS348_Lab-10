@@ -44,17 +44,17 @@ double parse_number(const string &expression){
     double return_num = 0; double dec_check = 1; double neg_check = 1; int stop = 0;
     if(expression[0] == '-'){neg_check *= -1;}
     for(char x : expression){
-        if(x == '.'){
-            dec_check = 10;
-        }else if(isdig(x)){
-            return_num += (x-'0')/dec_check;
-        }
         if(dec_check == 1){
             return_num *= 10;
         }else if (dec_check == 10 && stop == 0){
             return_num /= 10; stop = 1;
         }else{
             dec_check *= 10;
+        }
+        if(x == '.'){
+            dec_check = 10;
+        }else if(isdig(x)){
+            return_num += (x-'0')/dec_check;
         }
     }
     return_num*=neg_check;
