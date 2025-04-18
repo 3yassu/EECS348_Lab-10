@@ -1,5 +1,5 @@
 # EECS348 Lab 10
-
+ 
 This is a template for Lab 10 with continuous integration testing set up in a
 [GitHub Actions workflow](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions).
 When you push code to this repository, it will automatically be compiled and
