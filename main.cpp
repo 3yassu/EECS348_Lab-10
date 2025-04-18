@@ -12,6 +12,8 @@ int main(int argc, char *argv[]) {
     string reader;
     ifstream file(filename);
     while(getline(file, reader)){
+        int readsize = reader.size();
+        if(readsize == 0){cout << "Not valid!" << endl; continue;}
         if(reader[reader.size() - 1] == 0x0A){reader.erase(reader.size() - 1);}
         while(reader[reader.size() - 1] <= 0x20 || reader[reader.size() - 1] == 0x7F){reader.erase(reader.size() - 1);}
         while(reader[0] <= 0x20 || reader[0] == 0x7F){reader.erase(0, 1);}
